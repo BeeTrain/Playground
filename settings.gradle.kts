@@ -10,6 +10,7 @@ apply(from = File(modulesConfiguratorPath))
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 // Management settings
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -28,14 +29,12 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             val kotlinVersion = "1.6.20"
-            val androidGradleVersion = "7.1.2"
+            val androidGradleVersion = "7.1.3"
 
             val pluginId = requested.id.id
             when {
                 pluginId.startsWith("org.jetbrains.kotlin") -> useVersion(kotlinVersion)
-                pluginId.startsWith("com.android.") -> {
-                    useModule("com.android.tools.build:gradle:$androidGradleVersion")
-                }
+                pluginId.startsWith("com.android.") -> useVersion(androidGradleVersion)
             }
         }
     }
