@@ -2,14 +2,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorSecondary">@color/green_200</item>
-        <item name="colorSecondaryVariant">@color/green_500</item>
+        <item name="colorPrimary">@color/red_600</item>
+        <item name="colorPrimaryVariant">@color/red_800</item>
+        <item name="colorSecondary">@color/yellow_800</item>
+        <item name="colorSecondaryVariant">@color/yellow_900</item>
 
         <item name="colorBackground">@color/white</item>
         <item name="android:colorBackground">?colorBackground</item>
-        <item name="colorSurface">@color/white</item>
+        <item name="colorSurface">@color/grey_100</item>
 
         <!-- Text, icons, dividers -->
         <item name="colorOnPrimary">@color/white</item>
